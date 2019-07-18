@@ -1,0 +1,63 @@
+server:
+  #端口号
+  port: 9035
+
+##数据库连接信息
+spring:
+  #  profiles:
+  #    active: dev
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          # 服务名小写
+          lower-case-service-id: true
+      routes:
+    # =====================================
+      - id: SERVICEBASIC
+          # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://SERVICEBASIC
+        predicates:
+        - Path=/basic/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEFEIGN
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://SERVICEFEIGN
+        predicates:
+        - Path=/feign/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEAPI
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://SERVICEAPI
+        predicates:
+        - Path=/webApi/**
+        filters:
+        - StripPrefix=0
+  # =====================================
+
+  #====================================
+  application:
+    name: serviceGateway
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@127.0.0.1:9092/eureka/eureka
+    enabled: true
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
