@@ -1,1 +1,27 @@
-foo: dev/master/test
+server:
+  #端口号
+  port: 9038
+  servlet:
+    context-path: /feign
+spring:
+  application:
+    name: serviceFeign
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@127.0.0.1:9092/eureka/eureka
+#      http://localhost:9092/eureka/
+
+myt-hsp-sidecar-php-file:
+  ribbon:
+    ## 服务提供者的地址，不是服务注册中心的地址
+    listOfServers: http://10.10.10.250:9991
+## 这个要有，如果不加，只加了上面也没用
+ribbon:
+  eureka:
+    enabled: false
+feign:
+  hystrix:
+    enabled: true
