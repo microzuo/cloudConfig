@@ -6,7 +6,7 @@ server:
 ##数据库连接信息
 spring:
   application:
-      name: inter-hsp-basic
+      name: basicService
   datasource:
     url: jdbc:postgresql://10.10.10.100:5432/postgres
     username: postgres
