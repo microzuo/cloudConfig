@@ -17,7 +17,7 @@ spring:
     # =====================================
       - id: SERVICEBASIC
           # lb代表从注册中心获取服务，且已负载均衡方式转发
-        uri: lb://BASICSERVICE
+        uri: lb://INTER-HSP-BASIC
         predicates:
         - Path=/basic/**
         filters:
@@ -120,7 +120,7 @@ spring:
 
   #====================================
   application:
-    name: getaeway
+    name: inter-hsp-getaeway
 eureka:
   instance:
     prefer-ip-address: true
