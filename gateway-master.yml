@@ -58,7 +58,7 @@ spring:
         filters:
         - StripPrefix=0  
         
-       - id: SERVICEFILE
+      - id: SERVICEFILE
           # lb代表从注册中心获取服务，且已负载均衡方式转发
         uri: lb://INTER-HSP-FILE
         predicates:
@@ -112,6 +112,7 @@ spring:
                     # lb代表从注册中心获取服务，且已负载均衡方式转发
         uri: lb://INTER-HSP-UTILS
         predicates:
+        
         - Path=/utils/**
         filters:
         - StripPrefix=0         
