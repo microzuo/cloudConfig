@@ -1,12 +1,12 @@
 server:
   #端口号
-  port: 9030
+  port: 9038
   servlet:
-    context-path: /basic
+    context-path: /interface
 ##数据库连接信息
 spring:
   application:
-      name: serviceBasic
+      name: inter-hsp-interface
   datasource:
     url: jdbc:postgresql://10.10.10.100:5432/postgres
     username: postgres

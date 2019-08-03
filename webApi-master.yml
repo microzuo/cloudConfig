@@ -1,6 +1,6 @@
 server:
   #端口号
-  port: 9033
+  port: 9043
   servlet:
     context-path: /webApi
 ##数据库连接信息
@@ -8,7 +8,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: serviceApi
+    name: inter-hsp-webapi
   datasource:
     url: jdbc:postgresql://10.10.10.100:5432/postgres
     username: postgres

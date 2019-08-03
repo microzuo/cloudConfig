@@ -1,6 +1,6 @@
 server:
   #端口号
-  port: 9035
+  port: 9037
 
 ##数据库连接信息
 spring:
@@ -17,25 +17,104 @@ spring:
     # =====================================
       - id: SERVICEBASIC
           # lb代表从注册中心获取服务，且已负载均衡方式转发
-        uri: lb://SERVICEBASIC
+        uri: lb://INTER-HSP-BASIC
         predicates:
         - Path=/basic/**
         filters:
         - StripPrefix=0
       - id: SERVICEFEIGN
                     # lb代表从注册中心获取服务，且已负载均衡方式转发
-        uri: lb://SERVICEFEIGN
+        uri: lb://INTER-HSP-FEIGN
         predicates:
         - Path=/feign/**
         filters:
         - StripPrefix=0
       - id: SERVICEAPI
                     # lb代表从注册中心获取服务，且已负载均衡方式转发
-        uri: lb://SERVICEAPI
+        uri: lb://INTER-HSP-WEBAPI
         predicates:
         - Path=/webApi/**
         filters:
         - StripPrefix=0
+      - id: SERVICECACHE
+          # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-CACHE
+        predicates:
+        - Path=/cache/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICECOMMON
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-COMMON
+        predicates:
+        - Path=/common/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEDOCTOR
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-DOCTOR
+        predicates:
+        - Path=/doctor/**
+        filters:
+        - StripPrefix=0  
+        
+       - id: SERVICEFILE
+          # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-FILE
+        predicates:
+        - Path=/file/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEFINANCE
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-FINANCE
+        predicates:
+        - Path=/finance/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEINTERFACE
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-INTERFACE
+        predicates:
+        - Path=/interface/**
+        filters:
+        - StripPrefix=0    
+      - id: SERVICEMANAGER
+          # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-MANAGER
+        predicates:
+        - Path=/manager/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEMEDICAL
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-MEDICAL
+        predicates:
+        - Path=/medocal/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEORDER
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-ORDER
+        predicates:
+        - Path=/order/**
+        filters:
+        - StripPrefix=0  
+
+      - id: SERVICEPATIENT
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-PATIENT
+        predicates:
+        - Path=/patient/**
+        filters:
+        - StripPrefix=0
+      - id: SERVICEUTILS
+                    # lb代表从注册中心获取服务，且已负载均衡方式转发
+        uri: lb://INTER-HSP-UTILS
+        predicates:
+        - Path=/utils/**
+        filters:
+        - StripPrefix=0         
   # =====================================
 
   #====================================

@@ -1,12 +1,12 @@
 server:
   #端口号
-  port: 9032
+  port: 9033
   servlet:
-    context-path: /common
+    context-path: /doctor
 ##数据库连接信息
 spring:
   application:
-    name: inter-hsp-common
+    name: inter-hsp-doctor
   redis:
     host: 10.10.10.100
     port: 6379

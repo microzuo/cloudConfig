@@ -1,0 +1,26 @@
+server:
+  #端口号
+  port: 9042
+  servlet:
+    context-path: /utils
+
+spring:
+  application:
+    name: inter-hsp-utils
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@127.0.0.1:9092/eureka/eureka/
+  instance:
+    prefer-ip-address: true
+    #      http://localhost:9092/eureka/
+#开启熔断
+#feign:
+#  hystrix:
+#    enabled: true
+
+sidecar:
+  port: 9992     #常用工具服务异构微服务的端口
+  healthUri: http://10.10.10.250:9992/V1/api/test  #对应第三方程序的health接口

@@ -1,11 +1,11 @@
 server:
   #端口号
-  port: 9038
+  port: 9034
   servlet:
     context-path: /feign
 spring:
   application:
-    name: serviceFeign
+    name: inter-hsp-feign
   main:
     allow-bean-definition-overriding: true  
 eureka:
