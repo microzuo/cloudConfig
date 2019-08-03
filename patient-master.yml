@@ -1,6 +1,6 @@
 server:
   #端口号
-  port: 9041
+  port: 9042
   servlet:
     context-path: /patient
 ##数据库连接信息

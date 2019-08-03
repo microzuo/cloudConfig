@@ -1,6 +1,6 @@
 server:
   #端口号
-  port: 9040
+  port: 9041
   servlet:
     context-path: /order
 ##数据库连接信息
