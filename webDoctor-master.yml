@@ -8,7 +8,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: inter-hsp-weboctor
+    name: inter-hsp-webdoctor
   datasource:
     url: jdbc:postgresql://10.10.10.100:5432/postgres
     username: postgres
