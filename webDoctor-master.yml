@@ -10,7 +10,7 @@ spring:
   application:
     name: inter-hsp-webdoctor
   datasource:
-    url: jdbc:postgresql://10.10.10.100:3307/internetHsp
+    url: jdbc:mysql://10.10.10.100:3307/internetHsp
     username: root
     password: 
     driver-class-name: com.mysql.jdbc.Driver

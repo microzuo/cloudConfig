@@ -8,7 +8,7 @@ spring:
   application:
       name: inter-hsp-order
   datasource:
-    url: jdbc:postgresql://10.10.10.100:5432/postgres
+    url: jdbc:mysql://10.10.10.100:3307/internetHsp
     username: postgres
     password: 12345678
     driver-class-name: org.postgresql.Driver
