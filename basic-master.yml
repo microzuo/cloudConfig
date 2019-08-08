@@ -8,7 +8,7 @@ spring:
   application:
     name: inter-hsp-basic
   datasource:
-    url: jdbc:mysql://10.10.10.100:3307/internetHsp
+    url: jdbc:mysql://10.10.10.100:3307/internetHsp?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 
     driver-class-name: com.mysql.jdbc.Driver
