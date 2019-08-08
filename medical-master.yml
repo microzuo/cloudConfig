@@ -6,12 +6,12 @@ server:
 ##数据库连接信息
 spring:
   application:
-      name: inter-hsp-medical
+    name: inter-hsp-medical
   datasource:
-    url: jdbc:postgresql://10.10.10.100:5432/postgres
-    username: postgres
-    password: 12345678
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://10.10.10.100:3307/internetHsp
+    username: root
+    password: 
+    driver-class-name: com.mysql.jdbc.Driver
     ###################以下为druid增加的配置###########################
     type: com.alibaba.druid.pool.DruidDataSource
     # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -42,7 +42,7 @@ spring:
 
   #JPA配置
   jpa:
-    database: postgresql
+    database: mysql
     show-sql: true
     #Hibernate ddl auto
     hibernate:
@@ -50,20 +50,10 @@ spring:
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         jdbc:
           lob:
             non_contextual_creation: true
-#        enable_lazy_load_no_trans: true
-      #mongodb 配置
-      #data:
-      #mongodb:
-      #database: mhszfb
-      #host: 118.190.117.164
-      #port: 28018
-      #username: mongo
-      #password: 063@1M#0Yy
-
   redis:
     host: 10.10.10.100
     port: 6379
@@ -81,6 +71,7 @@ spring:
         max-wait: -1
         min-idle: 0
     password:
+
 
 
 #http client配置服务
