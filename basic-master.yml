@@ -46,7 +46,7 @@ spring:
     show-sql: true
     #Hibernate ddl auto
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
