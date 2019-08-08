@@ -44,7 +44,7 @@ spring:
 
   #JPA配置
   jpa:
-    database: internetHsp
+    database: mysql
     show-sql: true
     #Hibernate ddl auto
     hibernate:
