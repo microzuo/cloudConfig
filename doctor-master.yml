@@ -8,7 +8,7 @@ spring:
   application:
     name: inter-hsp-doctor
   datasource:
-    url: jdbc:mysql://10.10.10.100:3307/internetHsp?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://10.10.10.100:3307/internethsp?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 
     driver-class-name: com.mysql.jdbc.Driver
@@ -42,7 +42,7 @@ spring:
 
   #JPA配置
   jpa:
-  #  database: mysql
+    database: mysql
     show-sql: true
     #Hibernate ddl auto
     hibernate:
